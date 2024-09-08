@@ -2,7 +2,40 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
-    "types": []
+    "baseUrl": "./",
+    "types": [],
+    "paths": {
+      "@app/*": [
+        "./src/app/*"
+      ],
+      "@assets/*": [
+        "./src/assets/*"
+      ],
+      "@core/*": [
+        "./src/app/core/*"
+      ],
+      "@env/*": [
+        "./src/environments/*"
+      ],
+      "@models/*": [
+        "./src/app/models/*"
+      ],
+      "@modules/*": [
+        "./src/app/modules/*"
+      ],
+      "@services/*": [
+        "./src/app/services/*"
+      ],
+      "@shared/*": [
+        "./src/app/shared/*"
+      ],
+      "@testing/*": [
+        "./src/testing/*"
+      ],
+      "@utils/*": [
+        "./src/app/utils/*"
+      ]
+    }
   },
   "files": ["src/main.ts"],
   "include": ["src/**/*.d.ts"],

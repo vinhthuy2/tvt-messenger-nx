@@ -1,1 +1,21 @@
-<app-nx-welcome></app-nx-welcome> <router-outlet></router-outlet>
+<div class="root-container">
+  <app-top-connector></app-top-connector>
+
+  <ng-container *ngrxLet="connected$ as connected">
+    @if (connected) {
+      <app-sidebar></app-sidebar>
+      <div>
+        @if (chatSelected$ | async) {
+          <app-chat-box></app-chat-box>
+        } @else {
+          <span
+            class="col-span-2 text-center"
+          >Select a chat to start chatting</span
+          >
+        }
+      </div>
+    } @else {
+      <span class="col-span-2 text-center">Connect to start using</span>
+    }
+  </ng-container>
+</div>

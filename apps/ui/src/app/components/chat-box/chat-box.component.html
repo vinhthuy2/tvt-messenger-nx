@@ -1,0 +1,12 @@
+@if (conversation$ | async; as conversation) {
+  <app-chat-header />
+  <app-chat-panel />
+  <div class="flex gap-3 items-start">
+    <textarea class="flex-1 border rounded-xl"></textarea>
+    <button class="bg-emerald-800 px-5 py-2 text-white rounded-xl">Send</button>
+  </div>
+} @else {
+  <div class="flex items-center justify-center h-full">
+    <p class="text-gray-400">Select a conversation to start chatting</p>
+  </div>
+}

@@ -1,0 +1,10 @@
+<input
+  #idInput
+  [(ngModel)]="userId"
+  [disabled]="(isConnected$ | async) ?? false"
+  class="id-input"
+  placeholder="Your Id"
+/>
+<button (click)="onConnect()" [disabled]="idInput.value === ''" class="btn">
+  {{ (isConnected$ | async) ? 'Disconnect' : 'Connect' }}
+</button>

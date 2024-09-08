@@ -1,0 +1,11 @@
+<ng-container *ngrxLet="{ chats: chats$, activeChatId: activeChatId$ } as vm">
+  <div class="flex flex-col gap-2 p-2">
+    @for (chat of vm.chats; track chat.id) {
+      <app-chat-list-item
+        [chat]="chat"
+        [active]="vm.activeChatId === chat.id"
+        (click)="onChatSelected(chat.id)"
+      />
+    }
+  </div>
+</ng-container>

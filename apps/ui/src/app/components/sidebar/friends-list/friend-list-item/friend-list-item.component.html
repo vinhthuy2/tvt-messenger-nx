@@ -1,0 +1,12 @@
+<div class="flex flex-col items-center text-center cursor-pointer gap-2">
+  <div class="avatar">
+    <img
+      [ngSrc]="data?.avatar || '/assets/user.svg'"
+      alt="avatar"
+      height="40"
+      width="40"
+    />
+  </div>
+
+  <span>{{ data?.name }}</span>
+</div>

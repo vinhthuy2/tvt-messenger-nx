@@ -1,6 +1,40 @@
 {
   "extends": "./tsconfig.json",
   "include": ["src/**/*.ts"],
-  "compilerOptions": {},
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@app/*": [
+        "./src/app/*"
+      ],
+      "@assets/*": [
+        "./src/assets/*"
+      ],
+      "@core/*": [
+        "./src/app/core/*"
+      ],
+      "@env/*": [
+        "./src/environments/*"
+      ],
+      "@models/*": [
+        "./src/app/models/*"
+      ],
+      "@modules/*": [
+        "./src/app/modules/*"
+      ],
+      "@services/*": [
+        "./src/app/services/*"
+      ],
+      "@shared/*": [
+        "./src/app/shared/*"
+      ],
+      "@testing/*": [
+        "./src/testing/*"
+      ],
+      "@utils/*": [
+        "./src/app/utils/*"
+      ]
+    }
+  },
   "exclude": ["jest.config.ts", "src/**/*.test.ts", "src/**/*.spec.ts"]
 }

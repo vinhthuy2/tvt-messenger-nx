@@ -1,0 +1,9 @@
+:host {
+  height: 100%;
+  padding: 1rem;
+  background-color: theme('colors.amber.100');
+  border-radius: theme('borderRadius.xl');
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

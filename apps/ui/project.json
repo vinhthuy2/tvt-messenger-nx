@@ -20,7 +20,8 @@
           {
             "glob": "**/*",
             "input": "apps/ui/public"
-          }
+          },
+          "apps/ui/src/assets"
         ],
         "styles": ["apps/ui/src/styles.scss"],
         "scripts": []
@@ -62,7 +63,10 @@
           "buildTarget": "ui:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "options": {
+        "proxyConfig": "apps/ui/proxy.conf.json"
+      }
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",

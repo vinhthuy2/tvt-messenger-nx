@@ -1,0 +1,9 @@
+<div
+  [ngClass]="isOwnMessage ? 'flex-row-reverse' : 'flex-row'"
+  class="flex gap-2"
+>
+  <p class="border rounded-2xl px-5 py-3 order-2 max-w-[80%]">
+    {{ message }}
+  </p>
+  <div class="rounded-full w-[3rem] h-[3rem] bg-fuchsia-700 order-1"></div>
+</div>

@@ -1,0 +1,8 @@
+<ng-container *ngIf="friends$ | async as friends">
+  @for (friend of friends; track friend.id) {
+    <app-friend-list-item
+      (click)="onFriendSelected(friend.id)"
+      [data]="friend"
+    ></app-friend-list-item>
+  }
+</ng-container>

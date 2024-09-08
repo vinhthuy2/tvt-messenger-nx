@@ -1,0 +1,6 @@
+:host {
+  height: 100%;
+  display: grid;
+  gap: 0.2rem;
+  grid-template-rows: auto 1fr 50px;
+}
